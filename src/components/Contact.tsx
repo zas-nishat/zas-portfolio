@@ -61,12 +61,12 @@ const Contact = () => {
               </Button>
             ))}
           </div>
-
+          {/* 
           <div className="pt-8 border-t border-primary/10">
             <p className="text-muted-foreground">
               © 2025 Zahed Al Sabit. Built with React & TailwindCSS
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
