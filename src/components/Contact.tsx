@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,8 +26,8 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, label: "GitHub", href: "https://github.com/zas-nishat" },
     { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/zas-nishat/" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-    { icon: Mail, label: "Email", href: "mailto:zahedalsabit945@gmail.com" }
+    { icon: Mail, label: "Email", href: "mailto:zahedalsabit945@gmail.com" },
+    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/nishat.zayn" }
   ];
 
   return (
