@@ -45,10 +45,10 @@ const About = () => {
     <section id="about" ref={sectionRef} className="py-24 px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             A passionate developer focused on creating exceptional mobile experiences and continuously expanding my technical expertise
           </p>
         </div>

@@ -37,10 +37,10 @@ const Contact = () => {
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Let's <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-8">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
 
@@ -50,7 +50,7 @@ const Contact = () => {
                 key={link.label}
                 variant="outline"
                 size="lg"
-                className={`border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 animate-fade-in-up`}
+                className={`p-4 text-base sm:text-lg border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
                 asChild
               >

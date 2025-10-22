@@ -44,10 +44,10 @@ const Skills = () => {
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Skills & <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Technologies</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl text-muted-foreground">
             My current tech stack and learning path
           </p>
         </div>
