@@ -36,8 +36,15 @@ const Hero = () => {
           Hi, I'm <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Zahed Al Sabit</span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+        <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
           Crafting beautiful mobile experiences with Flutter, while expanding my skills in JavaScript and Laravel
+        </p>
+
+        <p className="text-base md:text-lg text-muted-foreground/80 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
+          Passionate about creating intuitive user interfaces and seamless mobile applications. 
+          Currently on a journey to become a full-stack developer by mastering modern web technologies 
+          and backend frameworks. I believe in writing clean, maintainable code and continuously learning 
+          new tools to deliver exceptional digital experiences.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
