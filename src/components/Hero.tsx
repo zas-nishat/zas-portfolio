@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,22 +28,22 @@ const Hero = () => {
       <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
 
-        <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+        <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-bold mb-6">
           Hi, I'm Zahed Al Sabit
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto">
           Crafting beautiful mobile experiences with Flutter, while expanding my skills in JavaScript and Laravel
         </p>
 
-        <p className="text-sm sm:text-base md:text-lg text-muted-foreground/80 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground/80 mb-8 max-w-3xl mx-auto">
           Passionate about creating intuitive user interfaces and seamless mobile applications.
           Currently on a journey to become a full-stack developer by mastering modern web technologies
           and backend frameworks. I believe in writing clean, maintainable code and continuously learning
           new tools to deliver exceptional digital experiences.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up flex-wrap" style={{ animationDelay: "0.8s" }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
           <Button
             size="lg"
             className="bg-primary hover:opacity-90 transition-opacity text-lg px-8 w-full sm:w-auto"
@@ -61,9 +61,7 @@ const Hero = () => {
           </Button>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={() => scrollToSection("about")}>
-          <ArrowDown className="w-8 h-8 text-muted-foreground" />
-        </div>
+        
       </div>
     </section>
   );
