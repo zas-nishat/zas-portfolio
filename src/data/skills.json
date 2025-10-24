@@ -1,14 +1,32 @@
 [
   {
     "title": "Primary Skills",
-    "skills": ["Flutter", "Dart", "Firebase", "Mobile UI/UX", "State Management"]
+    "skills": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Mobile UI/UX",
+      "GetX"
+    ]
   },
   {
     "title": "Learning & Exploring",
-    "skills": ["JavaScript", "React", "Node.js", "Laravel", "PHP", "MySQL"]
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Laravel",
+      "PHP",
+      "MySQL"
+    ]
   },
   {
     "title": "Tools & Others",
-    "skills": ["Git", "VS Code", "Figma", "REST APIs", "Postman"]
+    "skills": [
+      "Git",
+      "VS Code",
+      "REST APIs",
+      "Postman"
+    ]
   }
 ]
