@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Code2, Smartphone, Server } from "lucide-react";
+import about from "@/data/about.json";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,23 +24,13 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
-  const interests = [
-    {
-      icon: Smartphone,
-      title: "Flutter Development",
-      description: "Building cross-platform mobile apps with beautiful UIs and smooth performance"
-    },
-    {
-      icon: Code2,
-      title: "JavaScript",
-      description: "Currently learning modern JavaScript frameworks and web development"
-    },
-    {
-      icon: Server,
-      title: "Laravel",
-      description: "Exploring backend development with PHP's powerful Laravel framework"
-    }
-  ];
+
+
+const iconComponents: { [key: string]: React.ElementType } = {
+  Smartphone: Smartphone,
+  Code2: Code2,
+  Server: Server,
+};
 
   return (
     <section id="about" ref={sectionRef} className="py-24 px-6 relative">
@@ -54,24 +45,27 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {interests.map((interest, index) => (
-            <Card
-              key={interest.title}
-              className={`p-6 bg-card/50 backdrop-blur border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{
-                animationDelay: `${index * 0.2}s`,
-                transitionDelay: `${index * 0.2}s`
-              }}
-            >
-              <div className="mb-4 w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
-                <interest.icon className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{interest.title}</h3>
-              <p className="text-muted-foreground">{interest.description}</p>
-            </Card>
-          ))}
+          {about.map((interest, index) => {
+            const IconComponent = iconComponents[interest.icon];
+            return (
+              <Card
+                key={interest.title}
+                className={`p-6 bg-card/50 backdrop-blur border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{
+                  animationDelay: `${index * 0.2}s`,
+                  transitionDelay: `${index * 0.2}s`
+                }}
+              >
+                <div className="mb-4 w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+                  {IconComponent && <IconComponent className="w-6 h-6 text-primary-foreground" />}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{interest.title}</h3>
+                <p className="text-muted-foreground">{interest.description}</p>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

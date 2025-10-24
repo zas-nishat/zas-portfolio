@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "Smartphone",
+    "title": "Flutter Development",
+    "description": "Building cross-platform mobile apps with beautiful UIs and smooth performance"
+  },
+  {
+    "icon": "Code2",
+    "title": "JavaScript",
+    "description": "Currently learning modern JavaScript frameworks and web development"
+  },
+  {
+    "icon": "Server",
+    "title": "Laravel",
+    "description": "Exploring backend development with PHP's powerful Laravel framework"
+  }
+]
