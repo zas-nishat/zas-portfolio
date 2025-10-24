@@ -1,0 +1,35 @@
+[
+  {
+    "title": "E-Commerce App",
+    "description": "A full-featured mobile shopping app built with Flutter, featuring cart management, product catalog, and user authentication.",
+    "tags": [
+      "Flutter",
+      "Firebase",
+      "Dart"
+    ],
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "title": "Task Manager",
+    "description": "A productivity app for managing daily tasks with clean UI and smooth animations.",
+    "tags": [
+      "Flutter",
+      "SQLite",
+      "Provider"
+    ],
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "title": "Weather Dashboard",
+    "description": "Real-time weather information app with beautiful animations and location-based forecasts.",
+    "tags": [
+      "Flutter",
+      "REST API",
+      "Bloc"
+    ],
+    "link": "#",
+    "github": "#"
+  }
+]

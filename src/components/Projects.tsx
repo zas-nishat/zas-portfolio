@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import projects from "@/data/projects.json";
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,29 +25,7 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
-  const projects = [
-    {
-      title: "E-Commerce App",
-      description: "A full-featured mobile shopping app built with Flutter, featuring cart management, product catalog, and user authentication.",
-      tags: ["Flutter", "Firebase", "Dart"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Task Manager",
-      description: "A productivity app for managing daily tasks with clean UI and smooth animations.",
-      tags: ["Flutter", "SQLite", "Provider"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather information app with beautiful animations and location-based forecasts.",
-      tags: ["Flutter", "REST API", "Bloc"],
-      link: "#",
-      github: "#"
-    }
-  ];
+
 
   return (
     <section id="projects" ref={sectionRef} className="py-24 px-6 relative">
