@@ -36,17 +36,17 @@ const About = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "zas.sabit@gmail.com",
+      value: "zahedalsabit945@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+8801799-689896",
+      value: "+8801870-345945",
     },
     {
       icon: MapPin,
       label: "Address",
-      value: "Dhaka, Bangladesh",
+      value: "Mirpur 12, Dhaka, Bangladesh",
     },
   ];
 
