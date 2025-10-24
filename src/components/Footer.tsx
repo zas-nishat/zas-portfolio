@@ -1,6 +1,8 @@
 import React from "react";
 import personalInfo from "../data/personalinfo.json";
-import { Github, Linkedin, Facebook } from "lucide-react";
+import { Github, Linkedin, Facebook, Heart } from "lucide-react";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
 
 const socialIcons: { [key: string]: React.ElementType } = {
   github: Github,
@@ -63,9 +65,8 @@ const Footer: React.FC = () => {
               {[
                 "Flutter App Development",
                 "Firebase Integration",
-                "REST API & Backend",
-                "UI/UX Design",
-                "State Management (GetX, Provider)",
+                "REST APIs",
+                "State Management (GetX)",
                 "Responsive Web Design",
               ].map((item) => (
                 <li
@@ -111,12 +112,26 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-6 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            &copy; {currentYear} {personalInfo.name}. All rights reserved.
-          </p>
+      {/* Bottom Section */}
+      <div className="bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm py-4 px-10 flex flex-col md:flex-row justify-between items-center gap-2">
+        {/* Left Side */}
+        <p className="text-left w-full md:w-auto">
+          © {currentYear} {personalInfo.name}. All rights reserved.
+        </p>
+
+        {/* Right Side - Made With */}
+        <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+          <span>Made with</span>
+          <Heart
+            size={16}
+            className="text-red-500 animate-pulse"
+            fill="currentColor"
+          />
+          <span>using</span>
+          <FaReact className="text-sky-500" size={18} />
+          <SiTailwindcss className="text-teal-400" size={18} />
         </div>
       </div>
     </footer>
