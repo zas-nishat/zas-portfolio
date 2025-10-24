@@ -39,9 +39,16 @@ const iconComponents: { [key: string]: React.ElementType } = {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             About Me
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             A passionate developer focused on creating exceptional mobile experiences and continuously expanding my technical expertise
           </p>
+          <a
+            href="/cv.pdf"
+            download="Zahed_Al_Sabit_CV.pdf"
+            className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-6 py-2 text-base sm:text-lg border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 mb-12`}
+          >
+            Download CV
+          </a>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
