@@ -1,0 +1,38 @@
+[
+  {
+    "icon": "Smartphone",
+    "title": "Flutter Development",
+    "period": "2021 - Present",
+    "description": "Building cross-platform mobile applications with beautiful UIs and smooth animations. Focused on creating intuitive user experiences.",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "State Management"
+    ]
+  },
+  {
+    "icon": "Code2",
+    "title": "JavaScript Journey",
+    "period": "2023 - Present",
+    "description": "Exploring modern web development with JavaScript. Learning React, Node.js, and the ecosystem to build full-stack applications.",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "icon": "Server",
+    "title": "Laravel Learning",
+    "period": "2024 - Present",
+    "description": "Diving into backend development with Laravel. Understanding MVC architecture, building RESTful APIs, and database management.",
+    "skills": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "REST APIs"
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Code2, Smartphone, Server } from "lucide-react";
+import journey from "@/data/journey.json";
 
 const Experience = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,29 +24,13 @@ const Experience = () => {
     return () => observer.disconnect();
   }, []);
 
-  const experiences = [
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Flutter Development",
-      period: "2021 - Present",
-      description: "Building cross-platform mobile applications with beautiful UIs and smooth animations. Focused on creating intuitive user experiences.",
-      skills: ["Flutter", "Dart", "Firebase", "State Management"],
-    },
-    {
-      icon: <Code2 className="w-6 h-6" />,
-      title: "JavaScript Journey",
-      period: "2023 - Present",
-      description: "Exploring modern web development with JavaScript. Learning React, Node.js, and the ecosystem to build full-stack applications.",
-      skills: ["JavaScript", "React", "Node.js", "TypeScript"],
-    },
-    {
-      icon: <Server className="w-6 h-6" />,
-      title: "Laravel Learning",
-      period: "2024 - Present",
-      description: "Diving into backend development with Laravel. Understanding MVC architecture, building RESTful APIs, and database management.",
-      skills: ["Laravel", "PHP", "MySQL", "REST APIs"],
-    },
-  ];
+  
+
+const iconComponents: { [key: string]: React.ReactNode } = {
+  Smartphone: <Smartphone className="w-6 h-6" />,
+  Code2: <Code2 className="w-6 h-6" />,
+  Server: <Server className="w-6 h-6" />,
+};
 
   return (
     <section id="experience" ref={sectionRef} className="py-24 px-6 relative">
@@ -64,7 +49,7 @@ const Experience = () => {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
 
           <div className="space-y-12">
-            {experiences.map((exp, index) => (
+            {journey.map((exp, index) => (
               <div
                 key={exp.title}
                 className={`relative transition-all duration-1000 ${
@@ -81,7 +66,7 @@ const Experience = () => {
                     <Card className="p-6 bg-card/50 backdrop-blur border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-glow group">
                       <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                         <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                          {exp.icon}
+                          {iconComponents[exp.icon]}
                         </div>
                         <div>
                           <h3 className="text-xl font-semibold">{exp.title}</h3>
