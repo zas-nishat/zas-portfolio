@@ -3,9 +3,31 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import projects from "@/data/projects.json";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import ProjectDetail from "./ProjectDetail";
+
+interface Project {
+  title: string;
+  description: string;
+  longDescription: string;
+  tags: string[];
+  technologies: string[];
+  features: string[];
+  images: string[];
+  liveDemoLink: string;
+  githubRepoLink: string;
+}
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -24,8 +46,6 @@ const Projects = () => {
 
     return () => observer.disconnect();
   }, []);
-
-
 
   return (
     <section id="projects" ref={sectionRef} className="py-24 px-6 relative">
@@ -68,14 +88,37 @@ const Projects = () => {
               </div>
 
               <div className="flex gap-2">
-                <Button size="sm" variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10">
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  View
-                </Button>
-                <Button size="sm" variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10">
-                  <Github className="w-4 h-4 mr-1" />
-                  Code
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex-1 border-primary/30 hover:bg-primary/10"
+                      onClick={() => setSelectedProject(project)}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      View Details
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto">
+                    <DialogHeader>
+                      <DialogTitle>{selectedProject?.title}</DialogTitle>
+                      <DialogDescription>
+                        {selectedProject?.description}
+                      </DialogDescription>
+                    </DialogHeader>
+                    {selectedProject && <ProjectDetail project={selectedProject} />}
+                  </DialogContent>
+                </Dialog>
+
+                {project.githubRepoLink && project.githubRepoLink !== "#" && (
+                  <Button asChild size="sm" variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10">
+                    <a href={project.githubRepoLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-1" />
+                      Code
+                    </a>
+                  </Button>
+                )}
               </div>
             </Card>
           ))}

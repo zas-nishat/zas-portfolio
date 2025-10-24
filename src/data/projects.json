@@ -2,34 +2,76 @@
   {
     "title": "E-Commerce App",
     "description": "A full-featured mobile shopping app built with Flutter, featuring cart management, product catalog, and user authentication.",
+    "longDescription": "This e-commerce application provides a seamless shopping experience with features like product browsing, secure user authentication, a dynamic shopping cart, and order management. Built with Flutter, it ensures a consistent and performant experience across both Android and iOS platforms. Firebase is used for backend services including authentication and database.",
     "tags": [
       "Flutter",
       "Firebase",
       "Dart"
     ],
-    "link": "#",
-    "github": "#"
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Firebase Authentication",
+      "Firestore",
+      "Provider for State Management"
+    ],
+    "features": [
+      "User Authentication (Sign up, Login, Logout)",
+      "Product Catalog with Search and Filtering",
+      "Shopping Cart Functionality",
+      "Order History and Tracking",
+      "Responsive UI for various screen sizes"
+    ],
+    "githubRepoLink": "https://github.com/yourusername/ecommerce-app"
   },
   {
     "title": "Task Manager",
     "description": "A productivity app for managing daily tasks with clean UI and smooth animations.",
+    "longDescription": "A robust task management application designed to help users organize their daily activities efficiently. It features intuitive task creation, categorization, due date reminders, and completion tracking. The clean user interface and smooth animations enhance the overall user experience, making task management a breeze. Data is stored locally using SQLite.",
     "tags": [
       "Flutter",
       "SQLite",
       "Provider"
     ],
-    "link": "#",
-    "github": "#"
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "SQLite Database",
+      "Provider for State Management",
+      "Animations"
+    ],
+    "features": [
+      "Create, Read, Update, Delete Tasks",
+      "Task Categorization",
+      "Due Date Reminders",
+      "Task Completion Tracking",
+      "Search and Filter Tasks"
+    ],
+    "githubRepoLink": "https://github.com/yourusername/taskmanager-app"
   },
   {
     "title": "Weather Dashboard",
     "description": "Real-time weather information app with beautiful animations and location-based forecasts.",
+    "longDescription": "This application provides real-time weather updates and forecasts based on the user's current location or a searched city. It integrates with a third-party weather API to fetch accurate data and presents it with beautiful, dynamic animations that reflect current weather conditions. The app is built using the BLoC pattern for state management, ensuring a scalable and maintainable codebase.",
     "tags": [
       "Flutter",
       "REST API",
       "Bloc"
     ],
-    "link": "#",
-    "github": "#"
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "RESTful API Integration",
+      "BLoC for State Management",
+      "Animations"
+    ],
+    "features": [
+      "Current Weather Conditions",
+      "5-day Weather Forecast",
+      "Location-based Weather",
+      "Search by City Name",
+      "Dynamic Weather Animations"
+    ],
+    "githubRepoLink": "https://github.com/yourusername/weather-dashboard"
   }
 ]
