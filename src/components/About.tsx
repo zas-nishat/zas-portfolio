@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Code2, Smartphone, Server } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Code2, Smartphone, Server, Download } from "lucide-react";
 import about from "@/data/about.json";
 
 const About = () => {
@@ -42,13 +43,17 @@ const iconComponents: { [key: string]: React.ElementType } = {
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             A passionate developer focused on creating exceptional mobile experiences and continuously expanding my technical expertise
           </p>
-          <a
-            href="/cv.pdf"
-            download="Zahed_Al_Sabit_CV.pdf"
-            className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-6 py-2 text-base sm:text-lg border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 mb-12`}
+          <Button
+            variant="outline"
+            size="lg"
+            className={`p-4 text-base sm:text-lg border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 mb-12`}
+            asChild
           >
-            Download CV
-          </a>
+            <a href="/cv.pdf" download="Zahed_Al_Sabit_CV.pdf" className="flex items-center">
+              <Download className="w-5 h-5 mr-2" />
+              Download CV
+            </a>
+          </Button>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
