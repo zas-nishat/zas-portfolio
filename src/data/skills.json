@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Primary Skills",
+    "skills": ["Flutter", "Dart", "Firebase", "Mobile UI/UX", "State Management"]
+  },
+  {
+    "title": "Learning & Exploring",
+    "skills": ["JavaScript", "React", "Node.js", "Laravel", "PHP", "MySQL"]
+  },
+  {
+    "title": "Tools & Others",
+    "skills": ["Git", "VS Code", "Figma", "REST APIs", "Postman"]
+  }
+]

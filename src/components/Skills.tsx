@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import skills from "@/data/skills.json";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,20 +23,7 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
-  const skillCategories = [
-    {
-      title: "Primary Skills",
-      skills: ["Flutter", "Dart", "Firebase", "Mobile UI/UX", "State Management"]
-    },
-    {
-      title: "Learning & Exploring",
-      skills: ["JavaScript", "React", "Node.js", "Laravel", "PHP", "MySQL"]
-    },
-    {
-      title: "Tools & Others",
-      skills: ["Git", "VS Code", "Figma", "REST APIs", "Postman"]
-    }
-  ];
+
 
   return (
     <section id="skills" ref={sectionRef} className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
@@ -53,7 +41,7 @@ const Skills = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
+          {skills.map((category, categoryIndex) => (
             <div
               key={category.title}
               className={`transition-all duration-1000 ${
