@@ -1,0 +1,23 @@
+{
+  "name": "Zahed Al Sabit",
+  "email": "zahedalsabit945@gmail.com",
+  "phone": "+8801870-345945",
+  "address": "Mirpur 12, Dhaka, Bangladesh",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/zas-nishat",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/zas-nishat/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://www.facebook.com/nishat.zayn",
+      "icon": "twitter"
+    }
+  ]
+}

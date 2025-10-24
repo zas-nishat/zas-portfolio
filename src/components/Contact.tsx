@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Mail, Github, Linkedin, Twitter, Facebook } from "lucide-react";
+import personalInfo from "@/data/personalinfo.json"; // Import personalInfo
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,12 +28,26 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com/zas-nishat" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/zas-nishat/" },
-    { icon: Mail, label: "Email", href: "mailto:zahedalsabit945@gmail.com" },
-    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/nishat.zayn" }
-  ];
+  const iconComponents: { [key: string]: React.ElementType } = {
+    github: Github,
+    linkedin: Linkedin,
+    twitter: Twitter,
+    mail: Mail,
+    facebook: Facebook,
+  };
+
+  const socialLinks = personalInfo.socials.map(social => ({
+    icon: iconComponents[social.icon.toLowerCase()],
+    label: social.name,
+    href: social.url,
+  }));
+
+  // Add email link from personalInfo
+  socialLinks.push({
+    icon: Mail,
+    label: "Email",
+    href: `mailto:${personalInfo.email}`,
+  });
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -73,7 +88,7 @@ const Contact = () => {
                 asChild
               >
                 <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <link.icon className="w-5 h-5 mr-2" />
+                  {link.icon && <link.icon className="w-5 h-5 mr-2" />}
                   {link.label}
                 </a>
               </Button>
@@ -136,3 +151,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

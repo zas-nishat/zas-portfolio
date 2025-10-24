@@ -5,6 +5,7 @@ import { Code2, Smartphone, Server, Download, User, Mail, Phone, MapPin, Github,
 import about from "@/data/about.json";
 import educationData from "@/data/education.json";
 import profileImage from "@/images/zas-nishat.jpg";
+import personalInfo from "@/data/personalinfo.json"; // Import personalInfo
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,22 +32,22 @@ const About = () => {
     {
       icon: User,
       label: "Name",
-      value: "Zahed Al Sabit",
+      value: personalInfo.name,
     },
     {
       icon: Mail,
       label: "Email",
-      value: "zahedalsabit945@gmail.com",
+      value: personalInfo.email,
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+8801870-345945",
+      value: personalInfo.phone,
     },
     {
       icon: MapPin,
       label: "Address",
-      value: "Mirpur 12, Dhaka, Bangladesh",
+      value: personalInfo.address,
     },
   ];
 
@@ -159,3 +160,4 @@ const About = () => {
 };
 
 export default About;
+
