@@ -46,7 +46,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Me</span>
+            About Me
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             A passionate developer focused on creating exceptional mobile experiences and continuously expanding my technical expertise
@@ -65,7 +65,7 @@ const About = () => {
                 transitionDelay: `${index * 0.2}s`
               }}
             >
-              <div className="mb-4 w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="mb-4 w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
                 <interest.icon className="w-6 h-6 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-semibold mb-2">{interest.title}</h3>

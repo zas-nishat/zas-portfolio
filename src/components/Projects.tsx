@@ -53,7 +53,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
+            Featured Projects
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
             Some of my recent work and side projects
@@ -70,7 +70,7 @@ const Projects = () => {
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
               <div className="mb-4">
-                <div className="w-full h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-full h-32 bg-primary/20 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-4xl">📱</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>

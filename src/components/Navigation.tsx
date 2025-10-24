@@ -8,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ModeToggle } from "./ModeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,15 +39,14 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-primary/10 shadow-glow" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-primary/10 shadow-glow" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("home")}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
           >
             ZAS
           </button>
@@ -63,6 +63,7 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
+            <ModeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,7 +79,7 @@ const Navigation = () => {
                   <SheetTitle>
                     <button
                       onClick={() => scrollToSection("home")}
-                      className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+                      className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
                     >
                       ZAS
                     </button>
@@ -95,6 +96,7 @@ const Navigation = () => {
                       </button>
                     </SheetTrigger>
                   ))}
+                  <ModeToggle />
                 </div>
               </SheetContent>
             </Sheet>

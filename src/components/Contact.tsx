@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto relative z-10">
         <div className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connect</span>
+            Let's Connect
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground mb-8">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.

@@ -52,7 +52,7 @@ const Experience = () => {
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            My <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Journey</span>
+            My Journey
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
             Continuous learning and growing as a developer
@@ -61,7 +61,7 @@ const Experience = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/20" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
