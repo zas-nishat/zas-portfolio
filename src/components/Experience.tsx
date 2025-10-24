@@ -74,7 +74,7 @@ const Experience = () => {
               >
                 <div className={`flex items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                   {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-primary shadow-glow transform -translate-x-1/2 animate-pulse" />
+                  <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-primary shadow-glow transform -translate-x-1/2" />
 
                   {/* Content */}
                   <div className={`w-full md:w-[calc(50%-2rem)] ml-16 md:ml-0 ${index % 2 === 0 ? "md:text-right" : ""}`}>
