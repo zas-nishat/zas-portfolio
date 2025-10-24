@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code2, Smartphone, Server, Download, User, Mail, Phone, MapPin } from "lucide-react";
+import { Code2, Smartphone, Server, Download, User, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import about from "@/data/about.json";
+import educationData from "@/data/education.json";
 import profileImage from "@/images/zas-nishat.jpg";
 
 const About = () => {
@@ -53,6 +54,8 @@ const About = () => {
     Smartphone: Smartphone,
     Code2: Code2,
     Server: Server,
+    Github: Github,
+    Linkedin: Linkedin,
   };
 
   return (
@@ -72,36 +75,54 @@ const About = () => {
             <img src={profileImage} alt="Zahed Al Sabit" className="rounded-lg shadow-lg w-full h-auto object-cover aspect-[4/5]" />
           </div>
 
-          <div className="md:col-span-2 space-y-6 flex flex-col justify-center">
-            {userDetails.map((detail, index) => {
-              const Icon = detail.icon;
-              return (
-                <div
-                  key={detail.label}
-                  className={`flex items-start transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                    <Icon className="h-6 w-6" />
+          <div className="md:col-span-2 space-y-8 flex flex-col justify-start">
+            {/* Personal Details Section */}
+            <div className="flex flex-wrap gap-x-8 gap-y-4 justify-start">
+              {userDetails.map((detail, index) => {
+                const Icon = detail.icon;
+                return (
+                  <div
+                    key={detail.label}
+                    className={`flex items-start transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="text-base font-semibold text-muted-foreground">{detail.label}</h4>
+                      <p className="text-base">{detail.value}</p>
+                    </div>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-muted-foreground">{detail.label}</h4>
-                    <p className="text-lg">{detail.value}</p>
-                  </div>
+                );
+              })}
+            </div>
+
+            {/* Education Section */}
+            <div className={`space-y-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+              style={{ transitionDelay: `${(userDetails.length + 1) * 100}ms` }}>
+              <h3 className="text-lg font-semibold">Education:</h3>
+              {educationData.education.map((edu, index) => (
+                <div key={index} className="mb-4 last:mb-0">
+                  <h4 className="text-base font-semibold">{edu.degree}</h4>
+                  <p className="text-sm text-muted-foreground">{edu.institution} ({edu.year})</p>
+                  <p className="text-xs text-muted-foreground/80">{edu.description}</p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+
+            {/* Download CV Button */}
             <div
               className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-              style={{ transitionDelay: `${userDetails.length * 100}ms` }}
+              style={{ transitionDelay: `${(userDetails.length + educationData.education.length + 2) * 100}ms` }}
             >
               <Button
                 variant="outline"
                 size="lg"
-                className={`p-4 text-base sm:text-lg border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 w-full sm:w-auto`}
+                className={`p-4 text-sm sm:text-base border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all hover:scale-105 w-full sm:w-auto`}
                 asChild
               >
-                <a href="/cv.pdf" download="Zahed_Al_Sabit_CV.pdf" className="flex items-center justify-center">
+                <a href="/cv.pdf" download="Zahed_Al_Sabit_CV.pdf" className="flex items-center justify-start">
                   <Download className="w-5 h-5 mr-2" />
                   Download CV
                 </a>

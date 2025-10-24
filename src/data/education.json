@@ -1,0 +1,17 @@
+{
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University Name",
+      "year": "2018 - 2022",
+      "description": "Relevant coursework, projects, and achievements."
+    },
+    {
+      "degree": "High School Diploma",
+      "institution": "High School Name",
+      "year": "2014 - 2018",
+      "description": "Focus on science and mathematics."
+    }
+  ],
+  "socialLinks": []
+}
