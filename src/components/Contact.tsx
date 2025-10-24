@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Card } from "@/components/ui/card";
 import { Mail, Github, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const Contact = () => {
@@ -29,6 +33,20 @@ const Contact = () => {
     { icon: Mail, label: "Email", href: "mailto:zahedalsabit945@gmail.com" },
     { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/nishat.zayn" }
   ];
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({ name, email, description });
+    // Here you would typically send this data to a backend service
+    alert("Message sent! (Check console for data)");
+    setName("");
+    setEmail("");
+    setDescription("");
+  };
 
   return (
     <section id="contact" ref={sectionRef} className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
@@ -61,12 +79,53 @@ const Contact = () => {
               </Button>
             ))}
           </div>
-          {/* 
-          <div className="pt-8 border-t border-primary/10">
-            <p className="text-muted-foreground">
-              © 2025 Zahed Al Sabit. Built with React & TailwindCSS
-            </p>
-          </div> */}
+
+          <div className="relative flex justify-center items-center my-8">
+            <div className="absolute w-full border-t border-primary/20" />
+            <span className="relative bg-background px-4 text-muted-foreground text-sm">
+              OR SEND AN EMAIL
+            </span>
+          </div>
+
+          <Card className="p-8 bg-card/50 backdrop-blur border-primary/10 max-w-lg mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="name">Name</Label>
+                  <Input
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="description">Description</Label>
+                <Textarea
+                  id="description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  rows={5}
+                  required
+                />
+              </div>
+              <Button type="submit" className="w-full">
+                Send Message
+              </Button>
+            </form>
+          </Card>
         </div>
       </div>
     </section>
