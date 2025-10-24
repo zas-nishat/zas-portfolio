@@ -24,16 +24,16 @@ const Experience = () => {
     return () => observer.disconnect();
   }, []);
 
-  
 
-const iconComponents: { [key: string]: React.ReactNode } = {
-  Smartphone: <Smartphone className="w-6 h-6" />,
-  Code2: <Code2 className="w-6 h-6" />,
-  Server: <Server className="w-6 h-6" />,
-};
+
+  const iconComponents: { [key: string]: React.ReactNode } = {
+    Smartphone: <Smartphone className="w-6 h-6" />,
+    Code2: <Code2 className="w-6 h-6" />,
+    Server: <Server className="w-6 h-6" />,
+  };
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 px-6 relative">
+    <section id="experience" ref={sectionRef} className="py-12 px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -48,13 +48,12 @@ const iconComponents: { [key: string]: React.ReactNode } = {
           {/* Timeline line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
 
-          <div className="space-y-12">
+          <div className="space-y-6">
             {journey.map((exp, index) => (
               <div
                 key={exp.title}
-                className={`relative transition-all duration-1000 ${
-                  isVisible ? "opacity-100 translate-x-0" : `opacity-0 ${index % 2 === 0 ? "-translate-x-10" : "translate-x-10"}`
-                }`}
+                className={`relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : `opacity-0 ${index % 2 === 0 ? "-translate-x-10" : "translate-x-10"}`
+                  }`}
                 style={{ transitionDelay: `${index * 0.2}s` }}
               >
                 <div className={`flex items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
@@ -63,7 +62,7 @@ const iconComponents: { [key: string]: React.ReactNode } = {
 
                   {/* Content */}
                   <div className={`w-full md:w-[calc(50%-2rem)] ml-16 md:ml-0 ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                    <Card className="p-6 bg-card/50 backdrop-blur border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-glow group">
+                    <Card className="p-4 bg-card/50 backdrop-blur border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-glow group">
                       <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                         <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                           {iconComponents[exp.icon]}
