@@ -97,6 +97,7 @@ const Contact = () => {
                     id="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name"
                     required
                   />
                 </div>
@@ -107,6 +108,7 @@ const Contact = () => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Example@gmail.com"
                     required
                   />
                 </div>
@@ -117,7 +119,8 @@ const Contact = () => {
                   id="description"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  rows={5}
+                  rows={2}
+                  placeholder="Write your message here..."
                   required
                 />
               </div>
