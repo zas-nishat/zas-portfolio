@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import skills from "@/data/skills.json";
+import progressSkills from "@/data/progressSkills.json";
 import CircularProgress from "./CircularProgress";
 
 const Skills = () => {
@@ -26,20 +27,7 @@ const Skills = () => {
 
 
 
-  const progressSkills = [
-    {
-      name: "Flutter",
-      progress: 90,
-    },
-    {
-      name: "JavaScript",
-      progress: 80,
-    },
-    {
-      name: "Laravel",
-      progress: 70,
-    },
-  ];
+  
 
   return (
     <section id="skills" ref={sectionRef} className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
