@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import skills from "@/data/skills.json";
+import CircularProgress from "./CircularProgress";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,6 +26,21 @@ const Skills = () => {
 
 
 
+  const progressSkills = [
+    {
+      name: "Flutter",
+      progress: 90,
+    },
+    {
+      name: "JavaScript",
+      progress: 80,
+    },
+    {
+      name: "Laravel",
+      progress: 70,
+    },
+  ];
+
   return (
     <section id="skills" ref={sectionRef} className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
       {/* Background decoration */}
@@ -38,6 +54,20 @@ const Skills = () => {
           <p className="text-lg sm:text-xl text-muted-foreground">
             My current tech stack and learning path
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {progressSkills.map((skill, index) => (
+            <div
+              key={skill.name}
+              className={`flex justify-center transition-all duration-1000 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <CircularProgress progress={skill.progress} name={skill.name} isVisible={isVisible} />
+            </div>
+          ))}
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

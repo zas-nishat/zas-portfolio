@@ -40,7 +40,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({ progress, name, isV
           background
           dataKey="value"
           angleAxisId={0}
-          fill="hsl(var(--primary))"
+          fill="hsl(var(--muted-foreground))"
           cornerRadius={10}
           className="transition-all duration-1000"
         />

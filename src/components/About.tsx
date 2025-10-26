@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
-import CircularProgress from "./CircularProgress";
 import { Button } from "@/components/ui/button";
-import { Download, User, Mail, Phone, MapPin } from "lucide-react";
+import { Code2, Smartphone, Server, Download, User, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import about from "@/data/about.json";
 import educationData from "@/data/education.json";
 import profileImage from "@/images/zas-nishat.jpg";
 import personalInfo from "@/data/personalinfo.json"; // Import personalInfo
@@ -53,25 +53,18 @@ const About = () => {
 
 
 
-  const skills = [
-    {
-      name: "Flutter Development",
-      progress: 90,
-    },
-    {
-      name: "JavaScript",
-      progress: 80,
-    },
-    {
-      name: "Laravel",
-      progress: 70,
-    },
-  ];
+  const iconComponents: { [key: string]: React.ElementType } = {
+    Smartphone: Smartphone,
+    Code2: Code2,
+    Server: Server,
+    Github: Github,
+    Linkedin: Linkedin,
+  };
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 px-6 relative">
+    <section id="about" ref={sectionRef} className="py-24 pb-6 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div className={`text-center mb-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             About Me
           </h2>
@@ -80,7 +73,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 items-stretch mb-24">
+        <div className="grid md:grid-cols-3 gap-12 items-stretch mb-12">
           <div className={`md:col-span-1 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"} max-w-xs mx-auto flex items-center`}>
             <img src={profileImage} alt="Zahed Al Sabit" className="rounded-lg shadow-lg w-full h-auto object-cover aspect-[4/5]" />
           </div>
@@ -141,18 +134,6 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {skills.map((skill, index) => (
-            <div
-              key={skill.name}
-              className={`flex justify-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <CircularProgress progress={skill.progress} name={skill.name} isVisible={isVisible} />
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
