@@ -65,7 +65,7 @@ const Services = () => {
                   <div className="flex-shrink-0 h-16 w-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
                     <Icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold mb-4">{service.title}</h3>
+                  <h3 className="text-sm md:text-xl font-bold mb-4">{service.title}</h3>
                   <p className="hidden sm:block text-sm md:text-base text-muted-foreground">{service.description}</p>
                 </Card>
               </div>
