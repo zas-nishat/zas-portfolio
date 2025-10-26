@@ -10,10 +10,12 @@ import {
 } from "@/components/ui/dialog";
 import { Smartphone, Server, Code2 } from "lucide-react";
 import services from "@/data/services.json";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,22 +55,29 @@ const Services = () => {
         <div className="grid grid-cols-2 gap-8 items-stretch mb-12">
           {services.services.map((service, index) => {
             const Icon = iconComponents[service.icon];
+
+            const serviceCard = (
+              <div
+                className={`transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <Card className="p-8 h-full flex flex-col items-center text-center">
+                  <div className="flex-shrink-0 h-16 w-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <Icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold mb-4">{service.title}</h3>
+                  <p className="hidden sm:block text-sm md:text-base text-muted-foreground">{service.description}</p>
+                </Card>
+              </div>
+            );
+
             return (
               <Dialog key={index}>
-                <DialogTrigger asChild>
-                  <div
-                    className={`transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    <Card className="p-8 h-full flex flex-col items-center text-center cursor-pointer">
-                      <div className="flex-shrink-0 h-16 w-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
-                        <Icon className="h-8 w-8" />
-                      </div>
-                      <h3 className="text-lg md:text-xl font-bold mb-4">{service.title}</h3>
-                      <p className="hidden sm:block text-sm md:text-base text-muted-foreground">{service.description}</p>
-                    </Card>
-                  </div>
-                </DialogTrigger>
+                {isMobile ? (
+                  <DialogTrigger asChild>{serviceCard}</DialogTrigger>
+                ) : (
+                  serviceCard
+                )}
                 <DialogContent>
                   <DialogHeader className="flex flex-col items-center text-center">
                     <div className="flex-shrink-0 h-16 w-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
