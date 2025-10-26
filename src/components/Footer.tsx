@@ -113,10 +113,10 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm py-4 px-10 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm py-4 px-10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-2">
         {/* Left Side */}
-        <p className="text-left w-full md:w-auto">
-          © {currentYear} {personalInfo.name}. All rights reserved.
+        <p className="text-center md:text-left w-full md:w-auto">
+          <span className="hidden md:inline">© {currentYear} {personalInfo.name}. All rights reserved.</span>
         </p>
 
         {/* Right Side - Made With */}
