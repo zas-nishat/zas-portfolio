@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer"; // Import the Footer component
+import ScrollProgressBar from "./components/ScrollProgressBar"; // Import the ScrollProgressBar component
 
 const queryClient = new QueryClient();
 
@@ -12,6 +13,7 @@ const App = () => (
     <TooltipProvider>
       <BrowserRouter>
         <div className="flex flex-col min-h-screen"> {/* Added a div to contain content and footer */}
+          <ScrollProgressBar />
           <main className="flex-grow"> {/* Main content area */}
             <Routes>
               <Route path="/" element={<Index />} />
