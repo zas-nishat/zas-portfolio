@@ -25,7 +25,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({ progress, name, isV
   const data = [{ name, value: animatedProgress }];
 
   return (
-    <div className="flex flex-col items-center w-36 h-36 md:w-48 md:h-48">
+    <div className="flex flex-col items-center w-28 h-28 md:w-36 md:h-36">
       <ResponsiveContainer width="100%" height="100%">
         <RadialBarChart
           innerRadius="80%"
@@ -48,7 +48,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({ progress, name, isV
             y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            className="fill-foreground text-lg md:text-2xl font-bold"
+            className="fill-foreground text-md md:text-xl font-bold"
           >
             {`${Math.round(animatedProgress)}%`}
           </text>
