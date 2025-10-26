@@ -1,8 +1,6 @@
 import React from "react";
 import personalInfo from "../data/personalinfo.json";
 import { Github, Linkedin, Facebook, Heart } from "lucide-react";
-import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
 
 const socialIcons: { [key: string]: React.ElementType } = {
   github: Github,
@@ -121,18 +119,6 @@ const Footer: React.FC = () => {
           © {currentYear} {personalInfo.name}. All rights reserved.
         </p>
 
-        {/* Right Side - Made With */}
-        <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
-          <span>Made with</span>
-          <Heart
-            size={16}
-            className="text-red-500 animate-pulse"
-            fill="currentColor"
-          />
-          <span>using</span>
-          <FaReact className="text-sky-500" size={18} />
-          <SiTailwindcss className="text-teal-400" size={18} />
-        </div>
       </div>
     </footer>
   );
