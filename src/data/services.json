@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "icon": "Smartphone",
+      "title": "Flutter App Development",
+      "description": "Building beautiful and high-performance cross-platform mobile applications for Android and iOS using Flutter."
+    },
+    {
+      "icon": "Server",
+      "title": "Backend Development",
+      "description": "Creating robust and scalable backend systems and APIs using Node.js, Express, and other modern technologies."
+    },
+    {
+      "icon": "Server",
+      "title": "Backend Development",
+      "description": "Creating robust and scalable backend systems and APIs using Node.js, Express, and other modern technologies."
+    },
+    {
+      "icon": "Smartphone",
+      "title": "Flutter App Development",
+      "description": "Building beautiful and high-performance cross-platform mobile applications for Android and iOS using Flutter."
+    }
+  ]
+}
