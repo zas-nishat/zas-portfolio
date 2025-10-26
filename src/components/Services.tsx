@@ -70,9 +70,12 @@ const Services = () => {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>{service.title}</DialogTitle>
-                    <DialogDescription>{service.description}</DialogDescription>
+                  <DialogHeader className="flex flex-col items-center text-center">
+                    <div className="flex-shrink-0 h-16 w-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                      <Icon className="h-8 w-8" />
+                    </div>
+                    <DialogTitle className="text-2xl font-bold mb-2">{service.title}</DialogTitle>
+                    <DialogDescription className="text-base text-muted-foreground">{service.description}</DialogDescription>
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
