@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
 
 
@@ -29,18 +29,15 @@ const Hero = () => {
 
 
         <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-bold mb-6">
-          Hi, I'm Zahed Al Sabit
+          Zahed Al Sabit
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto">
-          Crafting beautiful mobile experiences with Flutter, while expanding my skills in JavaScript and Laravel
+          Building seamless mobile experiences with Flutter, enhanced by JavaScript and Laravel.
         </p>
 
         <p className="text-sm sm:text-base md:text-lg text-muted-foreground/80 mb-8 max-w-3xl mx-auto">
-          Passionate about creating intuitive user interfaces and seamless mobile applications.
-          Currently on a journey to become a full-stack developer by mastering modern web technologies
-          and backend frameworks. I believe in writing clean, maintainable code and continuously learning
-          new tools to deliver exceptional digital experiences.
+          Passionate about crafting intuitive mobile and web experiences with Flutter, JavaScript, and Laravel. Committed to writing clean, maintainable code while delivering impactful digital solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
@@ -61,7 +58,7 @@ const Hero = () => {
           </Button>
         </div>
 
-        
+
       </div>
     </section>
   );
