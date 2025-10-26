@@ -44,7 +44,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="flex flex-wrap justify-center gap-8 mb-16">
           {progressSkills.map((skill, index) => (
             <div
               key={skill.name}

@@ -4,11 +4,31 @@
     "progress": 90
   },
   {
+    "name": "Dart",
+    "progress": 85
+  },
+  {
+    "name": "Firebase",
+    "progress": 80
+  },
+  {
     "name": "JavaScript",
     "progress": 55
   },
   {
+    "name": "Node.js",
+    "progress": 40
+  },
+  {
+    "name": "React",
+    "progress": 50
+  },
+  {
     "name": "Laravel",
-    "progress": 20
+    "progress": 35
+  },
+  {
+    "name": "MySQL",
+    "progress": 40
   }
 ]
